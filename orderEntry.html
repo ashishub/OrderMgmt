@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Order Entry</title>
+</head>
+
+<body>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3  bg-light">
+        <div class="container p-lg-3 my-5">
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleInputEmail1">Your Order Number</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="MRW/19-20/.." required>
+                        <small id="emailHelp" class="form-text text-muted">This should be our order number to sent to
+                            Vendor.</small>
+                        <div class="invalid-feedback">
+                            Please enter a valid order number.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="orderPlacedDate">Order Date</label>
+                        <input type="date" class="form-control" id="orderPlacedDate" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="itemName">Vendor Name</label>
+                        <input list="vendorNameList" id="vendorName" name="vendorName" class="form-control" placeholder="Choose or Type..."/>
+                        <datalist id="vendorNameList">
+                            <option>Dalmia Refractories Limited</option>
+                            <option>Dalmia Cement (Bharat) Limited</option>
+                            <option>Shree Ceramic Fibers Pvt Limited</option>
+                            <option>Shetty Chemical &amp; Engg works</option>
+                            <option>Coromandal Refractories</option>
+                            <option>Sai Enterprises</option>
+                            <option>Carborundum Universal Limited</option>
+                            <option>Surya Millboard Industries</option>
+                            <option>Madras Refractory Works Pvt Limited</option>
+                            <option>Lakshmi Ceramics &amp; Refractories</option>
+                            <option>Sai Balaaji Refractories Pvt limited</option>
+                            <option>RV Refractories</option>
+                            <option>Nutech Refractories Pvt Limited</option>
+                            <option>Maithan Ceramics Limited</option>
+                            <option>Anchal Refractories</option>
+                            <option>Vikas Refractories</option>
+                        </datalist>
+                    </div>
+                
+                <div class="form-group">
+                    <label for="toAddressTextarea">To address</label>
+                    <textarea class="form-control" id="toAddressTextarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+                
+                <div class="card text-white bg-secondary">
+                        <div class="card-header">Items</div>
+                        <div class="card-body" id="items">
+                            <!--begins-->
+                            <div class="itemCard" data-itemnumber="1">
+                                <h5 class="card-title">#1</h5>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="itemName">Item Name</label>
+                                        <input list="itemNameList" id="itemName" name="itemName" class="form-control" placeholder="Choose or Type..."/>
+                                        <datalist id="itemNameList">
+                                            <option>DALCAST-135-N</option>
+                                            <option>DALCAST-140-N</option>
+                                            <option>DALCAST-160-N</option>
+                                            <option>DALCAST-170-N-LP</option>
+                                            <option>DALINCAST-11</option>
+                                            <option>DALINCAST-13</option>
+                                            <option>DALRAM-SH-70-30</option>
+                                            <option>DALSET-35-30-ASM</option>
+                                            <option>DALSET-50-30-AS-M</option>
+                                            <option>DALSET-70-30-ASM</option>
+                                            <option>DALSET-90-10-HSM</option>
+                                            <option>HA-50-30</option>
+                                            <option>HA-60-30</option>
+                                            <option>HA-70-30</option>
+                                            <option>HA-70-30-(AP-18)</option>
+                                            <option>HH-40-35</option>
+                                            <option>LF-50-25</option>
+                                            <option>LF-60-20</option>
+                                        </datalist>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="shapeName">Shape / Size</label>
+                                        <input list="shapeList" id="shapeName" name="shapeName" class="form-control" placeholder="Choose or Type..."/>
+                                        <datalist id="shapeList">
+                                            <option>230X115X25</option>
+                                            <option>230X115X40</option>
+                                            <option>230X115X50</option>
+                                            <option>230X115X75</option>
+                                            <option>230X115X75/50EA</option>
+                                            <option>230X115X75/50SA</option>
+                                            <option>230X115X75/65EA</option>
+                                            <option>230X115X75/65SA</option>
+                                            <option>230X115X75/70EA</option>
+                                            <option>230X115X75/70SA</option>
+                                            <option>AFRB-1</option>
+                                            <option>AFRB-2</option>
+                                            <option>AFRB-3</option>
+                                            <option>AFRB-4</option>
+                                            <option>AFRB-5</option>
+                                            <option>DALCAST-135-N</option>
+                                            <option>DALCAST-140-N</option>
+                                            <option>DALCAST-160-N</option>
+                                            <option>DALCAST-170-N-LP</option>
+                                            <option>DALINCAST-11</option>
+                                            <option>DALINCAST-13</option>
+                                            <option>DALRAM-SH-70-30</option>
+                                            <option>DALSET-35-30-ASM</option>
+                                            <option>DALSET-50-30-AS-M</option>
+                                            <option>DALSET-70-30-ASM</option>
+                                            <option>DALSET-90-10-HSM</option>
+                                            <option>LADLE WALL BRICKS-R-900</option>
+                                        </datalist>
+
+                                    </div>
+                                    <div class="form-group col-md-1 quantityDiv">
+                                        <label for="inputZip">Quantity</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                    <div class="form-group col-md-1">
+                                        <label for="unitType">Unit</label>
+                                        <input list="unitTypeList" id="unitType" name="unitType" class="form-control" placeholder="Choose or Type..."/>
+                                        <datalist id="unitTypeList">
+                                            <option>Nos</option>
+                                            <option>Pcs</option>
+                                            <option>Kgs</option>
+                                            <option>Mt</option>
+                                            <option>Sqm</option>
+                                            <option>Tin</option>
+                                            <option>Sets</option>
+                                            <option>Sht</option>
+                                            <option>Unt</option>
+                                            <option>Rolls</option>
+                                            <option>Box</option>
+                                            <option>Bags</option>
+                                            <option>Mts</option>
+                                        </datalist>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                            <label for="inputPrice">Price / Unit</label>
+                                            <input type="text" class="form-control inputPrice" placeholder="in digits">
+                                        </div>
+                                        <div class="form-group col-md-2 itemTotalDiv">
+                                                <label for="inputTotal">Total</label>
+                                                <input type="text" class="form-control" id="inputTotal" disabled>
+                                            </div>
+                                </div>
+                            </div>
+                            
+                          <!--Ends-->
+                        </div>
+                        <div class="card-footer text-muted text-center">
+                            <button id="addOneMoreItemBtn" class="btn btn-info"><i class="fas fa-plus-square"></i> Add Item</button>
+                            <button id="removeLastItemBtn" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Remove Item</button>
+                        </div>
+                      </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="orderEntry.js"></script>
+
+</body>
+
+</html>
