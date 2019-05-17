@@ -29,6 +29,12 @@ $(document).ready(function() {
         console.log(error);
       }
     });
+
+    $('.removeTerms').click(function() {
+      // $('.card-body').first().children('div').attr('data-itemnumber')
+      $(this).parent().remove();
+    });
+
   }
   bindEvents();
 
@@ -45,11 +51,25 @@ $(document).ready(function() {
     // alert('hello!');
   });
 
+  $('#addOneTermsBtn').click(function (e) {
+    e.preventDefault();
+    var termDivClone = $(".termDiv:first").clone();
+    $('#terms').append('<div class="form-group row termDiv">'+termDivClone.html()+'</div>');
+    console.log('Before = ' +$(".termDiv:last").find('.form-control').val());
+    $(".termDiv:last").find('.form-control').val('');
+    bindEvents();
+  });
+
   $('#removeLastItemBtn').click(function() {
     // $('.card-body').first().children('div').attr('data-itemnumber')
     if( $(".itemCard").length > 1) {
       $(".itemCard:last").remove();
     }
+  });
+
+  $('.removeTerms').click(function() {
+    // $('.card-body').first().children('div').attr('data-itemnumber')
+    $(this).parent().remove();
   });
 
   $("#vendorName").on('input', function () {

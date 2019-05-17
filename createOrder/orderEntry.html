@@ -14,8 +14,9 @@
 </head>
 
 <body>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3  bg-light">
+    <div class="position-relative overflow-hidden p-3 m-md-3  bg-light">
         <div class="container p-lg-3 my-5">
+            <h1>Create Order</h1>
             <form class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -34,57 +35,32 @@
                     </div>
                 </div>
                 <div class="form-group">
-                        <label for="itemName">Vendor Name</label>
-                        <input list="vendorNameList" id="vendorName" name="vendorName" class="form-control" placeholder="Choose or Type..."/>
-                        <datalist id="vendorNameList">
-                            <option>Dalmia Refractories Limited</option>
-                            <option>Dalmia Cement (Bharat) Limited</option>
-                            <option>Shree Ceramic Fibers Pvt Limited</option>
-                            <option>Shetty Chemical &amp; Engg works</option>
-                            <option>Coromandal Refractories</option>
-                            <option>Sai Enterprises</option>
-                            <option>Carborundum Universal Limited</option>
-                            <option>Surya Millboard Industries</option>
-                            <option>Madras Refractory Works Pvt Limited</option>
-                            <option>Lakshmi Ceramics &amp; Refractories</option>
-                            <option>Sai Balaaji Refractories Pvt limited</option>
-                            <option>RV Refractories</option>
-                            <option>Nutech Refractories Pvt Limited</option>
-                            <option>Maithan Ceramics Limited</option>
-                            <option>Anchal Refractories</option>
-                            <option>Vikas Refractories</option>
-                        </datalist>
-                    </div>
+                    <label for="itemName">Vendor Name</label>
+                    <input list="vendorNameList" id="vendorName" name="vendorName" class="form-control" placeholder="Choose or Type..."/>
+                    <datalist id="vendorNameList">
+                        <option>Dalmia Refractories Limited</option>
+                        <option>Dalmia Cement (Bharat) Limited</option>
+                        <option>Shree Ceramic Fibers Pvt Limited</option>
+                        <option>Shetty Chemical &amp; Engg works</option>
+                        <option>Coromandal Refractories</option>
+                        <option>Sai Enterprises</option>
+                        <option>Carborundum Universal Limited</option>
+                        <option>Surya Millboard Industries</option>
+                        <option>Madras Refractory Works Pvt Limited</option>
+                        <option>Lakshmi Ceramics &amp; Refractories</option>
+                        <option>Sai Balaaji Refractories Pvt limited</option>
+                        <option>RV Refractories</option>
+                        <option>Nutech Refractories Pvt Limited</option>
+                        <option>Maithan Ceramics Limited</option>
+                        <option>Anchal Refractories</option>
+                        <option>Vikas Refractories</option>
+                    </datalist>
+                </div>
                 
                 <div class="form-group">
                     <label for="toAddressTextarea">To address</label>
                     <textarea class="form-control" id="toAddressTextarea"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2"
-                        placeholder="Apartment, studio, or floor">
-                </div>
-                
                 <div class="card text-white bg-secondary">
                         <div class="card-header">Items</div>
                         <div class="card-body" id="items">
@@ -191,7 +167,39 @@
                             <button id="removeLastItemBtn" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Remove Item</button>
                         </div>
                       </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <br/>
+                <div class="card">
+                    <div class="card-header">Terms and Conditions</div>
+                        <div class="card-body" id="terms">
+                            <div class="form-group row termDiv">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Enter Terms Here" value="GST 18% Extra.">
+                                </div>
+                                <button class="btn btn-danger col-sm-2 removeTerms">Remove</button>
+                            </div>
+                            <div class="form-group row termDiv">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Enter Terms Here" value="Freight Charges - Extra on To-Pay basis.">
+                                </div>
+                                <button class="btn btn-danger col-sm-2 removeTerms">Remove</button>
+                            </div>
+                            <div class="form-group row termDiv">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Enter Terms Here" value='Book the material to "Redhills, Chennai, Tamil Nadu Through M/s. Navata Road transport"'>
+                                </div>
+                                <button class="btn btn-danger col-sm-2 removeTerms">Remove</button>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <a href="#" id="addOneTermsBtn">+ Add more Terms</a>
+                            <!-- <button id="addOneTermsBtn" class="btn btn-info"><i class="fas fa-plus-square"></i> Add Terms</button> -->
+                        </div>
+                </div>
+                <div class="section text-center">
+                        <button type="submit" class="btn btn-primary col-sum-2">Submit &amp; Save</button>
+                        
+                        <button type="submit" class="btn btn-primary col-sum-2">Print PDF</button>    
+                </div>
             </form>
         </div>
     </div>

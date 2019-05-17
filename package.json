@@ -1,0 +1,22 @@
+{
+  "name": "ordermgmt",
+  "version": "1.0.0",
+  "description": "Order management for small firms",
+  "main": "orderEntry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishub/OrderMgmt.git"
+  },
+  "author": "Ashish Kumar Omprakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishub/OrderMgmt/issues"
+  },
+  "homepage": "https://github.com/ashishub/OrderMgmt#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
