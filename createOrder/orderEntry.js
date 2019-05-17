@@ -44,7 +44,7 @@ $(document).ready(function() {
     var lastItemNum = parseInt(lastItemDiv.attr('data-itemnumber')) + 1;
     lastItemDiv.children(".card-title").text("#"+lastItemNum);
     // lastItemDiv.children('div').attr('data-itemnumber', lastItemNum);
-    $('.card-body').append('<div class="itemCard" data-itemnumber=\''+lastItemNum+'\'>'+lastItemDiv.html()+'</div>');
+    $('#items').append('<div class="itemCard" data-itemnumber=\''+lastItemNum+'\'>'+lastItemDiv.html()+'</div>');
     bindEvents();
     // $('.card-body').append(lastItemDiv.html());
   
